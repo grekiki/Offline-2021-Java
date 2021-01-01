@@ -1,10 +1,10 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
-class cube {
+class Cube {
 	int[] dim;
 
-	public cube(int x, int y, int z) {
+	public Cube(int x, int y, int z) {
 		dim = new int[] { x, y, z };
 	}
 }
@@ -12,9 +12,9 @@ class cube {
 class TestCase {
 	int[] dimensions;
 	int[][] hmap;
-	cube[] cubes;
+	Cube[] cubes;
 
-	public TestCase(int[] dimensions, int[][] hmap, cube[] cubes) {
+	public TestCase(int[] dimensions, int[][] hmap, Cube[] cubes) {
 		this.dimensions = dimensions;
 		this.hmap = hmap;
 		this.cubes = cubes;
@@ -54,13 +54,13 @@ public class TestReader {
 			}
 		}
 		int cubeCount = Integer.parseInt(in.readLine());
-		cube[] cubes = new cube[cubeCount];
+		Cube[] cubes = new Cube[cubeCount];
 		for (int i = 0; i < cubeCount; i++) {
 			st = new StringTokenizer(in.readLine());
 			int dimx = Integer.parseInt(st.nextToken());
 			int dimy = Integer.parseInt(st.nextToken());
 			int dimz = Integer.parseInt(st.nextToken());
-			cubes[i] = new cube(dimx, dimy, dimz);
+			cubes[i] = new Cube(dimx, dimy, dimz);
 		}
 		in.readLine();
 		return new TestCase(new int[] { w, h, layers }, hmap, cubes);
