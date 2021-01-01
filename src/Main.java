@@ -16,7 +16,8 @@ public class Main {
 		TestCase tc = TestReader.readTestCase(15);
 		
 		ArrayList<CubePosition> solution = SimpleSolver.solve(tc);
-		System.out.println(solution.size());
+		
+		SolutionWriter.writeSolution(solution, tc, 15);
 	}
 
 }
