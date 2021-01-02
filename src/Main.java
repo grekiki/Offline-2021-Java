@@ -13,11 +13,13 @@ public class Main {
 	}
 
 	public static void main(String[] args) throws Exception {
-		TestCase tc = TestReader.readTestCase(15);
-		
+		int testCase = 15;
+
+		TestCase tc = TestReader.readTestCase(testCase);
+
 		ArrayList<CubePosition> solution = SimpleSolver.solve(tc);
-		
-		SolutionWriter.writeSolution(solution, tc, 15);
+
+		SolutionWriter.writeSolution(solution, tc, testCase);
 	}
 
 }
